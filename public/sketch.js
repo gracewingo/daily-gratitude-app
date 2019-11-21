@@ -45,13 +45,13 @@ function getCanvas(){
     return canvas;
 }
 
-  function draw() {
-    stroke(255);
-    strokeWeight(8);
-    if (mouseIsPressed) {
-      line(pmouseX, pmouseY, mouseX, mouseY);
-    }
+function draw() {
+  stroke(255);
+  strokeWeight(8);
+  if (mouseIsPressed) {
+    line(pmouseX, pmouseY, mouseX, mouseY);
   }
+}
 
 
 
