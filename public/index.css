@@ -1,0 +1,102 @@
+body {
+    background: #042a3e;
+    color: rgb(230, 206, 118);
+    font-weight: 500;
+    font-size: 20px;
+    font-family: sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #b7fbf8;
+}
+
+.index-container {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.index-container > div {
+    margin: 10px;
+}
+
+.index-container > div > a {
+    color: #b7fbf8;
+}
+
+.index-container > div:nth-child(2){
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
+
+.location {
+    text-align: center;
+}
+
+.flex-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.flex {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.flex .submit-button {
+    margin-left: 10px;
+}
+
+.submit-button {
+    border: 1px solid #f3b70b;
+    background: #f3b70b;
+    color: #182d2c;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+}
+.submit-button:hover {
+    background-color: #78b5b2;
+    border: none;
+}
+
+input[type='text'] {
+    height: 30px;
+}
+
+.log-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.log-list > ul {
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    border: 5px solid rgb(240, 191, 32);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.p5Canvas {
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

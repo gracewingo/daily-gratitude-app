@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha256-2/3R3NV5zryj0fDjD3cDh+SNiWQ/TJiMVZzAo5FrhiU=" crossorigin="anonymous"></script>
+        <title>Daily Gratitude App</title>
+        <link href="index.css" rel="stylesheet"></link>
+    </head>
+    <body>
+        <h1>create everyday</h1>
+        <div class="index-container">
+            <div id="enter">
+                <a href="/">enter</a>
+            </div>
+             <div id="list"> 
+                <a href="/logs/index.html">list</a>
+            </div>
+        </div>
+        
+        <p class="location">
+            <span id="latitude"></span>&deg<br />
+            <span id="longitude"></span>&deg
+        </p>
+        <div class="flex-input">
+            <p>current mood:</p>
+            <div class="flex">
+                <input type="text" id="mood">
+            </div> 
+            <p>I'm grateful for:</p>
+            <div class="flex">
+                <input type="text" id="grateful">
+            </div> 
+            <button id="submit" class="submit-button">submit</button>
+        </div>
+        <div class="canvas-container"></div>
+        <script src="sketch.js"></script>
+    </body>
+</html>
