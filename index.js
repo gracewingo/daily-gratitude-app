@@ -30,6 +30,7 @@ app.post('/api', (request, response) => {
     );
     let image_file = `./exports/all/image_${data.timestamp}.png`;
     data.image = image_file;
+    data.alt = "graphic painted on a pink canvas"
     database.insert(data);
     response.json(data);
 });
