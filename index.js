@@ -3,6 +3,14 @@ const Datastore = require('nedb');
 const app = express();
 const fs = require('fs');
 require('dotenv').config()
+const request = require('request');
+
+
+request('http://localhost:3000/', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body) 
+  }
+})
 
 app.listen(3000, () => console.log("listening at 3000!"));
 app.use(express.static("public"));
@@ -25,10 +33,10 @@ app.post('/api', (request, response) => {
     data.timestamp = timestamp
     let img64 = data.image;
     let dataImg = img64.replace(/^data:image\/\w+;base64,/, "");
-
     fs.writeFile(`public/logs/exports/all/image_${data.timestamp}.png`, dataImg, {encoding: 'base64'}, (err) => 
         console.log('File created')
     );
+
     let image_file = `./exports/all/image_${data.timestamp}.png`;
     data.image = image_file;
     data.alt = "graphic painted on a pink canvas"
