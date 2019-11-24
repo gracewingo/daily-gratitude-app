@@ -1,9 +1,12 @@
 const express = require ('express');
-const Datastore = require('nedb');
 const app = express();
 const fs = require('fs');
-require('dotenv').config()
 const fetch = require('node-fetch');
+const Datastore = require('nedb');
+const database = new Datastore('database.db');
+require('dotenv').config()
+database.loadDatabase();
+
 
 app.get('/weather/:latlon', async (req, res) => {
     const latlon  = req.params.latlon.split(",");
@@ -17,12 +20,10 @@ app.get('/weather/:latlon', async (req, res) => {
     //if we want to use the fetch api (client side api) in node, install the node-fetch package 
 })
 
+// Handling JSON data 
 app.listen(3000, () => console.log("listening at 3000!"));
 app.use(express.static("public"));
 app.use(express.json({ limit: '1mb' }));
-
-const database = new Datastore('database.db');
-database.loadDatabase();
 
 app.get("/api", (req, res) => {
     database.find({}, (err, data) => {
@@ -31,6 +32,7 @@ app.get("/api", (req, res) => {
     })
 })
 
+/* Export all images to PNG on the server */
 app.post('/api', (request, response) => {
     const data = request.body;
     const timestamp = Date.now();
@@ -48,7 +50,6 @@ app.post('/api', (request, response) => {
 });
 
 /*
-
 learnings: 
 - wherever i make a request, the PATH is from that location 
 - learn more about express and node.js functions and routing... 
