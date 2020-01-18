@@ -54,23 +54,3 @@ function draw() {
     line(pmouseX, pmouseY, mouseX, mouseY);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-   TO DO: 
-   - create upload feature 
-   - fix that lat long bug - if location data exists, do this 
-
-
-*/
