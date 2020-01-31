@@ -48,9 +48,3 @@ app.post('/api', (request, response) => {
     database.insert(data);
     response.json(data);
 });
-
-/*
-learnings: 
-- wherever i make a request, the PATH is from that location 
-- learn more about express and node.js functions and routing... 
-*/
